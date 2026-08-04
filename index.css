@@ -8,12 +8,32 @@ body {
   text-align: center;
 }
 
+.container {
+  width: 600px;
+  margin: auto;
+  padding-top: 100px;
+}
+
 h1 {
   color: goldenrod;
 }
 
 #message-el {
   font-style: italic;
+  font-size: 21px;
+}
+
+.message-playing {
+  color: white;
+}
+
+.message-win {
+  color: #3cff4d;
+  font-weight: bold;
+}
+
+.message-lose {
+  color: #ff5252;
 }
 
 button {
@@ -24,13 +44,20 @@ button {
   padding-bottom: 5px;
   font-weight: bold;
   border: none;
-  border-radius: 2px;
   margin-bottom: 2px;
   margin-top: 2px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
 }
 
 .card {
   width: 100px;
   margin-right: 10px;
-  border-radius: 12px;
+  border-radius: 8px;
+  box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.4);
 }

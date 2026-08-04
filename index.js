@@ -1,6 +1,6 @@
 let player = {
-  name: "Per",
-  chips: 200,
+  name: "Andrea",
+  chips: 100,
 };
 
 let deck = [
@@ -97,7 +97,7 @@ function startGame() {
 }
 
 function renderGame() {
-  cardsEl.textContent = "Cards: ";
+  cardsEl.innerHTML = "";
   for (let i = 0; i < cards.length; i++) {
     let img = document.createElement("img");
     img.src = cards[i].image;
@@ -108,11 +108,14 @@ function renderGame() {
   sumEl.textContent = "Sum: " + sum;
   if (sum <= 20) {
     message = "Do you want to draw a new card?";
+    messageEl.className = "message-playing";
   } else if (sum === 21) {
-    message = "You've got Blackjack!";
+    message = "You've got Blackjack!🎉";
+    messageEl.className = "message-win";
     hasBlackJack = true;
   } else {
-    message = "You're out of the game!";
+    message = "You're out of the game!💀";
+    messageEl.className = "message-lose";
     isAlive = false;
   }
   messageEl.textContent = message;
