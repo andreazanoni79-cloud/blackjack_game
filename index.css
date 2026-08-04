@@ -1,7 +1,7 @@
 body {
   font-family:
     "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;
-  background-image: url("images/table.png");
+  background-image: url("/images/table.png");
   background-size: cover;
   background-position: center;
   font-weight: bold;
@@ -25,7 +25,7 @@ body {
   aspect-ratio: 5 / 7;
   min-height: 910px;
 
-  background-image: url("images/marcoBJ.png");
+  background-image: url("/images/marcoBJ.png");
   background-size: cover;
   background-position: center;
   border-radius: 35px;
