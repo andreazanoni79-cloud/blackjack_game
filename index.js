@@ -85,6 +85,7 @@ function getRandomCard() {
   let randomIndex = Math.floor(Math.random() * deck.length);
   let card = deck[randomIndex];
   return card;
+}
 
 function startGame() {
   isAlive = true;
@@ -100,6 +101,7 @@ function renderGame() {
   for (let i = 0; i < cards.length; i++) {
     let img = document.createElement("img");
     img.src = cards[i].image;
+    img.classList.add("card");
     cardsEl.appendChild(img);
   }
 
