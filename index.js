@@ -91,16 +91,15 @@ function startGame() {
   let firstCard = getRandomCard();
   let secondCard = getRandomCard();
   cards = [firstCard, secondCard];
-  sum = firstCard + secondCard;
+  sum = firstCard.value + secondCard.value;
   renderGame();
 }
 
 function renderGame() {
   cardsEl.textContent = "Cards: ";
   for (let i = 0; i < cards.length; i++) {
-    cardsEl.textContent += cards[i] + " ";
     let img = document.createElement("img");
-    img.src = "images/cards/QS.png";
+    img.src = cards[i].image;
     cardsEl.appendChild(img);
   }
 
@@ -120,7 +119,7 @@ function renderGame() {
 function newCard() {
   if (isAlive === true && hasBlackJack === false) {
     let card = getRandomCard();
-    sum += card;
+    sum += card.value;
     cards.push(card);
     renderGame();
   }
